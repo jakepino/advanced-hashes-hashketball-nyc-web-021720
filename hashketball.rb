@@ -175,7 +175,12 @@ end
   
 def team_names
   teams_info = game_hash
+  team_name_array = []
+  team_name_array << teams_info[:home][:team_name]
+  team_name_array << teams_info[:away][:team_name]
   
+  return team_name_array
+end
 
 
 
