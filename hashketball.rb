@@ -196,8 +196,6 @@ def player_numbers(team_name)
       away_team_info[:players].each do |player|
         jersey_arrary << player[:number]
         end
-      else
-        return nil
   end
   return jersey_arrary
 end
