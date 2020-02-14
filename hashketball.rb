@@ -141,7 +141,23 @@ def num_points_scored(player_name)
   return nil
 end
 
-
+def shoe_size(player_name)
+  # find home team stats firsts
+  players = game_hash
+  
+  players[:home][:players].each do |player|
+    if player_name == player[:player_name]
+      return player[:shoe]
+    end
+  end
+  #find away team stats next
+  players[:away][:players].each do |player|
+    if player_name == player[:player_name]
+      return player[:shoe]
+    end
+  end
+  return nil
+end
 
 
 
