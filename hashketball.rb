@@ -173,7 +173,9 @@ def team_colors(team)
   return nil
 end
   
-
+def team_names
+  teams_info = game_hash
+  
 
 
 
