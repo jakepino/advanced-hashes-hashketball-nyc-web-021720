@@ -273,7 +273,7 @@ def winning_team
 end
 
 def player_with_longest_name
-  long_name = game_hash[:home][:players]
+  long_name = game_hash[:home][:players][0]
   
   
    game_hash[:home][:players].each do |player|
@@ -287,5 +287,5 @@ def player_with_longest_name
       long_name = player
     end
   end
-    return long_name  
+    return long_name[:player_name]
 end
