@@ -187,7 +187,7 @@ def player_numbers(player_name)
   players_info = game_hash
   #iterate through home first
   players_info[:home][:players].each do |player|
-    if playey_name == player[:player]
+    if player_name == player[:player]
       jersey_arrary << players_info[:home][:player][:number]
     end
   end
