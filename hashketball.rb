@@ -192,7 +192,7 @@ def player_numbers(team_name)
       jersey_arrary << player[:number]
     end
     return jersey_arrary
-   else team_name == team_info[:away][:name]
+   elsif team_name == team_info[:away][:name]
     away_team_info = team_info[:away]
       away_team_info[:players].each do |player|
         jersey_arrary << player[:number]
