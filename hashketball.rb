@@ -271,3 +271,13 @@ def winning_team
     return game_hash[:away_total][:team_name]
   end
 end
+
+def player_with_longest_name
+  long_name = game_hash[:home][:players]
+  
+  
+   game_hash[:home][:players].each do |player|
+    if long_name[:player_name].length < player[:player_name].length
+      
+      
+    end
