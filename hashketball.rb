@@ -1,6 +1,6 @@
 # Write your code here!
 def game_hash
-  game_info = {
+  stats = {
     :home => {
       :team_name => "Brooklyn Nets",
       :colors => "Black, White",
@@ -120,11 +120,25 @@ def game_hash
         :slam_dunks => 12
       }]}
   }
-  return game_info
+  return stats
 end
 
 def num_points_scored(player_name)
-  player name = game_hash[]
+  # find home team stats firsts
+  players = game_hash
+  
+  players[:home][:player].each do |player|
+    if player_name == player[:player_name]
+      return player[:points]
+    end
+  end
+  
+  players[:away][:player].each do |player|
+    if player_name == player[:player_name]
+      return player{:points]
+    end
+  end
+  return nil
 end
 
 
