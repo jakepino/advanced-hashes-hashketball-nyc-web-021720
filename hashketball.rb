@@ -127,13 +127,13 @@ def num_points_scored(player_name)
   # find home team stats firsts
   players = game_hash
   
-  players[:home][:player].each do |player|
+  players[:home][:players].each do |player|
     if player_name == player[:player_name]
       return player[:points]
     end
   end
   #find away team stats next
-  players[:away][:player].each do |player|
+  players[:away][:players].each do |player|
     if player_name == player[:player_name]
       return player[:points]
     end
