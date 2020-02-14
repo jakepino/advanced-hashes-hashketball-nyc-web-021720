@@ -135,7 +135,7 @@ def num_points_scored(player_name)
   #find away team stats next
   players[:away][:player].each do |player|
     if player_name == player[:player_name]
-      return player{:points]
+      return player[:points]
     end
   end
   return nil
