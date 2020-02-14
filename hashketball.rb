@@ -225,11 +225,13 @@ def big_shoe_rebounds
      if big_shoe_player[:shoe] < player[:shoe]
        big_shoe_player = player
      end
+   end
       
     game_info[:away][:players].each do |player|
      if big_shoe_player[:shoe] < player[:shoe]
        big_shoe_player = player
      end
+   end
      return big_shoe_player[:rebounds]
 end
 
