@@ -164,13 +164,13 @@ def team_colors(team)
   team_info = game_hash
   
   if team == team_info[:home][:team_name]
-    return team_info[:colors]
+    return team_info[:home][:colors]
   end
   
   if team == team_info[:away][:team_name]
-    return team_info[:colors]
+    return team_info[:away][:colors]
   end
-  #return nil
+  return nil
 end
   
 
