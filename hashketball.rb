@@ -217,5 +217,19 @@ def player_stats(player_name)
   return nil
 end
 
-
+def big_shoe_rebounds
+  game_info = game_hash
+  big_shoe_player = game_info[:home][:players][0]
+  
+    game_info[:home][:players].each do |player|
+     if big_shoe_player[:shoe] < player[:shoe]
+       big_shoe_player = player
+     end
+      
+    game_info[:away][:players].each do |player|
+     if big_shoe_player[:shoe] < player[:shoe]
+       big_shoe_player = player
+     end
+     return big_shoe_player[:rebounds]
+end
 
