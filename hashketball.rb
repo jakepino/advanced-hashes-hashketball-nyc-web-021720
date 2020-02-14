@@ -159,6 +159,22 @@ def shoe_size(player_name)
   return nil
 end
 
+def team_colors(team)
+  #check home first
+  team_info = game_hash
+  
+  if team == team_info[:home]
+    return team_info[:team_colors]
+  end
+  
+  if team == team_info[:away]
+    return team_info[:team_colors]
+  else
+    return nil
+  end
+end
+  
+
 
 
 
