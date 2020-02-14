@@ -185,21 +185,21 @@ end
 def player_numbers(team_name)
   jersey_arrary = []
   team_info = game_hash
-  #iterate through home first
-  team_info[:home][:players].each do |player|
-    if team_name == player[:player]
-      jersey_arrary << players_info[:home][:player][:number]
+   
+  if team_name == team_info[:home][:name]
+   home_team_info = team_info[:home]
+    home_team_info[:players].each do |player|
+      jersey_arrary << player[:number]
     end
+   elsif
+    away_team_info = team_info[:away]
+      away_team_info[:players].each do |player|
+        jersey_arrary << player[:number]
+        end
+      else
+        return nil
   end
-  #iterate through away team
-  players_info[:away][:players].each do |player|
-    if  == player[:player]
-      jersey_arrary << players_info[:away][:player][:number]
-    end
-  end
-  return nil
-  
-  
+  return jersey_arrary
 end
 
 
