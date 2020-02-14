@@ -169,8 +169,6 @@ def team_colors(team)
   
   if team == team_info[:away]
     return team_info[:team_colors]
-  else
-    return nil
   end
 end
   
