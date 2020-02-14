@@ -205,13 +205,13 @@ def player_stats(player_name)
   
   player_stats[:home][:players].each do |player|
     if player_name == player[:player_name]
-      return player
+      return player.slice(:number, :shoe, :points, :rebounds, :assists, :steals, :blocks, :slam_dunks)
     end
   end
   #find away team stats next
   player_stats[:away][:players].each do |player|
     if player_name == player[:player_name]
-      return player
+      return player.slice(:number, :shoe, :points, :rebounds, :assists, :steals, :blocks, :slam_dunks)
     end
   end
   return nil
