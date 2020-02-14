@@ -170,7 +170,7 @@ def team_colors(team)
   if team == team_info[:away][:team_name]
     return team_info[:colors]
   end
-  return nil
+  #return nil
 end
   
 
