@@ -200,6 +200,22 @@ def player_numbers(team_name)
   return jersey_arrary
 end
 
+def player_stats(player_name)
+  player_stats = game_hash
+  
+  player_stats[:home][:players].each do |player|
+    if player_name == player[:player_name]
+      return player
+    end
+  end
+  #find away team stats next
+  player_stats[:away][:players].each do |player|
+    if player_name == player[:player_name]
+      return player
+    end
+  end
+  return nil
+end
 
 
 
