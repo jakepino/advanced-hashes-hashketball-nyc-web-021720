@@ -182,7 +182,25 @@ def team_names
   return team_name_array
 end
 
-
+def player_names(player_name)
+  jersey_arrary = []
+  players_info = game_hash
+  #iterate through home first
+  players_info[:home][:players].each do |player|
+    if playey_name == player[:player]
+      jersey_arrary << players_info[:home][:player][:number]
+    end
+  end
+  #iterate through away team
+  players_info[:away][:players].each do |player|
+    if player_name == player[:player]
+      jersey_arrary << players_info[:away][:player][:number]
+    end
+  end
+  return nil
+  
+  
+end
 
 
 
