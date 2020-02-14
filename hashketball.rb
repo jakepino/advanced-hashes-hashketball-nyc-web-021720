@@ -182,7 +182,7 @@ def team_names
   return team_name_array
 end
 
-def player_names(player_name)
+def player_numbers(player_name)
   jersey_arrary = []
   players_info = game_hash
   #iterate through home first
