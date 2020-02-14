@@ -38,8 +38,8 @@ def game_hash
         :slam_dunks => 15
       },
       {
-        :player_name => nil,
-        :number => nil,
+        :player_name => "Mason Plumlee",
+        :number => 1,
         :shoe => nil,
         :points => nil
         :rebounds => nil,
